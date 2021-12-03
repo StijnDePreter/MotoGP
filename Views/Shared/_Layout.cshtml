@@ -1,0 +1,23 @@
+﻿@{
+    var banners = new List<String>
+            { "bannerRaces.jpg", "bannerRiders.jpg", "bannerTeams.jpg", "bannerTickets.jpg" };
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - MotoGP</title>
+    <link ref="stylesheet" href = "~/css/site.css"/>
+</head>
+<body>
+    <a asp-controller="Home" asp-action="Index">
+        <img class="centered" src="~/images/banners/@banners[ViewBag.BannerNr]" alt="Banner" />
+    </a>
+    
+
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

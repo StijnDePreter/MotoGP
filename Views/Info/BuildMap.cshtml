@@ -1,0 +1,9 @@
+﻿
+<img src="~/images/banners/map.png" alt="Workplace" usemap="#workmap" width="1024" height="468">
+
+<map name="workmap">
+    @foreach (var Race in ViewBag.Races)
+   {
+     <area shape="circle" coords="@Race.X, @Race.Y,30" alt="@Race.Name" href=@Url.Action("Info", "ShowRace", new { id = Race.RaceID })> 
+   }
+</map>

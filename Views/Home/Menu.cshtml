@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .image {
+  width: 50%;
+}
+
+.container img {
+  width: calc(100% - (60px * 2));
+  margin: 20px;
+}
+</style>
+
+
+
+<img class="centered" src="~/images/banners/banner@(ViewBag.BannerNr).jpg" alt="Banner" />
+
+<div class="container">
+  <div class="image">
+      <a asp-controller="Info" asp-action="ListRaces">
+          <img src="~/images/banners/races.png" />
+      </a>
+  </div>
+  <div class="image">
+    <a asp-controller="Info" asp-action="ListTeams">
+      <img src="~/images/banners/teams.png" />
+    </a>
+  </div>
+  <div class="image">
+    <a asp-controller="Info" asp-action="ListRiders">
+      <img src="~/images/banners/riders.png" />
+    </a>
+  </div>
+  <div class="image">
+    
+    <a asp-controller="Shop" asp-action="OrderTicket">
+      <img src="~/images/banners/tickets.png" />
+    </a>
+  </div>
+</div>
+
